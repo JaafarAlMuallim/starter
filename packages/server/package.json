@@ -1,0 +1,34 @@
+{
+  "name": "@repo/server",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./auth": {
+      "types": "./dist/lib/auth.d.ts",
+      "default": "./src/lib/auth.ts"
+    }
+  },
+  "scripts": {
+    "validate": "tsc -w",
+    "dev": "concurrently \"bun --bun run validate\" \"bun run --watch src/app.ts\"",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@better-fetch/fetch": "^1.1.12",
+    "@hono/trpc-server": "^0.3.4",
+    "@libsql/kysely-libsql": "^0.4.1",
+    "@repo/db": "*",
+    "better-auth": "^1.1.14"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^20.17.12",
+    "typescript": "^5.5.4"
+  }
+}

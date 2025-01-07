@@ -1,28 +1,22 @@
 # Turborepo starter
 
-This is an official starter Turborepo.
+This is a turborepo starter, trying to create something similar to the experience of t3 apps.
 
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+It includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `landing`: an [Astro](https://astro.build) app
+- `web`: a [Next.js](https://nextjs.org/) app
+- `mobile`: an [Expo](https://expo.dev/) app
+- `@repo/ui`: a stub React component library that can be shared for `web` and any other compatible app
+- `@repo/validators`: zod schemas and type validations
+- `@repo/server`: [Hono](https://hono.dev/) app, currently using [tRPC](https://trpc.io/), will be migrating to hono RPC.
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
@@ -36,18 +30,18 @@ This Turborepo has some additional tools already setup for you:
 
 To build all apps and packages, run the following command:
 
-```
+```bash
 cd my-turborepo
-pnpm build
+bun build
 ```
 
 ### Develop
 
 To develop all apps and packages, run the following command:
 
-```
+```bash
 cd my-turborepo
-pnpm dev
+bun dev
 ```
 
 ### Remote Caching
@@ -59,17 +53,17 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
 
-```
+```bash
 cd my-turborepo
-npx turbo login
+bunx turbo login
 ```
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
 
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
 
-```
-npx turbo link
+```bash
+bunx turbo link
 ```
 
 ## Useful Links

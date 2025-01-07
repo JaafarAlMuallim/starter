@@ -27,6 +27,9 @@ out/
 build
 dist
 
+ios
+android
+
 
 # Debug
 npm-debug.log*

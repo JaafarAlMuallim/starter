@@ -76,3 +76,26 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## 🤝 Contributing
+
+### Clone the repo
+
+```bash
+git clone [https://github.com/xyz/zipzod@lates](https://github.com/JaafarAlMuallim/starter
+cd starter
+```
+
+### Run the project and its tasks
+
+```bash
+bun dev
+```
+
+### Run the tests
+
+```bash
+bun test
+```
+
+### Submit a pull request
